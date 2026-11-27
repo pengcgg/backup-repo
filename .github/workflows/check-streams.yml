@@ -6,6 +6,14 @@ on:
     - cron: "0 */4 * * *"
   workflow_dispatch:
     inputs:
+      src_txt:
+        description: "源 txt 地址（留空用默认 luobuqingcai 那份）"
+        required: false
+        default: ""
+      src_m3u:
+        description: "源 m3u 地址（留空自动按 txt 同名推导，先试 .m3u 再试 .m3u8）"
+        required: false
+        default: ""
       min_ratio:
         description: "最低有效率保护 0~1（低于此值视为源站异常，不覆盖文件）"
         required: false
@@ -45,13 +53,18 @@ jobs:
 
       - name: 检查并重新生成
         env:
-          SRC_TXT: https://raw.githubusercontent.com/pengcgg/backup-repo/main/juhe29.txt
-          SRC_M3U: 
+          # 手动 Run 时填了就用填的，没填用默认；m3u 留空则按 txt 同名自动推导
+          SRC_TXT: ${{ github.event.inputs.src_txt || 'http://luobuqingcai.hostingem.ru/zb/juhe29.txt' }}
+          SRC_M3U: ${{ github.event.inputs.src_m3u || '' }}
           OUT_TXT: juhe29.txt
           OUT_M3U: juhe29.m3u
-          WORKERS: "16"
-          TIMEOUT: "10"
-          RETRIES: "2"
+          WORKERS: "32"
+          DEEP_WORKERS: "24"
+          TIMEOUT: "8"
+          CONNECT_TIMEOUT: "4"
+          RETRIES: "1"
+          SEC_PER_URL_CAP: "20"
+          KEEP_NON_HTTP: "1"
           MIN_ITEMS: "20"
           REPORT: check-report.json
           DEEP: ${{ github.event.inputs.deep || '1' }}
