@@ -54,7 +54,7 @@ jobs:
       - name: 检查并重新生成
         env:
           # 手动 Run 时填了就用填的，没填用默认；m3u 留空则按 txt 同名自动推导
-          SRC_TXT: ${{ github.event.inputs.src_txt || 'http://luobuqingcai.hostingem.ru/zb/juhe29.txt' }}
+          SRC_TXT: ${{ github.event.inputs.src_txt || 'https://raw.githubusercontent.com/pengcgg/backup-repo/main/juhe29.txt' }}
           SRC_M3U: ${{ github.event.inputs.src_m3u || '' }}
           OUT_TXT: juhe29.txt
           OUT_M3U: juhe29.m3u
