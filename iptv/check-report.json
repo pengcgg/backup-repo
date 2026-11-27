@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-27 22:54:41 CST",
-  "elapsed_seconds": 60.0,
+  "generated_at": "2026-11-27 23:21:03 CST",
+  "elapsed_seconds": 53.7,
   "sources": [
     {
       "url": "https://tzdr.com/iptv.txt",
@@ -88,19 +88,18 @@
     }
   ],
   "total": 1812,
-  "alive": 321,
-  "dead": 1491,
-  "alive_ratio": 0.1772,
+  "alive": 318,
+  "dead": 1494,
+  "alive_ratio": 0.1755,
   "protected": false,
   "max_per_channel": 3,
-  "channels": 309,
-  "output_entries": 321,
+  "channels": 308,
+  "output_entries": 318,
   "dead_reasons": {
-    "超时": 1259,
-    "HTTP 403": 193,
-    "连接失败": 17,
-    "HTTP 404": 16,
-    "子列表/分片不可用": 6
+    "超时": 1296,
+    "HTTP 403": 192,
+    "子列表/分片不可用": 5,
+    "HTTP 404": 1
   },
   "config": {
     "connect_timeout": 5,
