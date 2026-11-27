@@ -1,3 +1,5 @@
 http://luobuqingcai.hostingem.ru/zb/juhe29.txt
 https://raw.githubusercontent.com/xJEYDAin/iptv/main/output/all_merged.m3u
 https://raw.githubusercontent.com/JE668/m3u-checker-max/refs/heads/main/output/live.m3u
+https://gitee.com/main-stream/tv/raw/master/BOSS.json
+
