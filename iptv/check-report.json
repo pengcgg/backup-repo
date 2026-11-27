@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-27 14:53:08 UTC",
-  "elapsed_seconds": 61.6,
+  "generated_at": "2026-11-27 22:54:41 CST",
+  "elapsed_seconds": 60.0,
   "sources": [
     {
       "url": "https://tzdr.com/iptv.txt",
@@ -11,7 +11,7 @@
     {
       "url": "https://live.kilvn.com/iptv.m3u",
       "ok": false,
-      "reason": "ClientHttpProxyError",
+      "reason": "连接失败",
       "entries": 0
     },
     {
@@ -88,18 +88,19 @@
     }
   ],
   "total": 1812,
-  "alive": 131,
-  "dead": 1681,
-  "alive_ratio": 0.0723,
+  "alive": 321,
+  "dead": 1491,
+  "alive_ratio": 0.1772,
   "protected": false,
   "max_per_channel": 3,
-  "channels": 129,
-  "output_entries": 131,
+  "channels": 309,
+  "output_entries": 321,
   "dead_reasons": {
-    "超时": 1488,
-    "HTTP 403": 189,
-    "子列表/分片不可用": 3,
-    "播放列表为空": 1
+    "超时": 1259,
+    "HTTP 403": 193,
+    "连接失败": 17,
+    "HTTP 404": 16,
+    "子列表/分片不可用": 6
   },
   "config": {
     "connect_timeout": 5,
