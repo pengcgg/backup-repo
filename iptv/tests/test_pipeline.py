@@ -21,7 +21,7 @@ os.environ.setdefault("MAX_PER_CHANNEL", "2")
 os.environ.setdefault("REPORT", "check-report.test.json")
 
 spec = importlib.util.spec_from_file_location(
-    "iptv", os.path.join(ROOT, ".github", "workflows", "iptv.py")
+    "iptv", os.path.join(ROOT, "iptv.py")
 )
 iptv = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(iptv)

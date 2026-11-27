@@ -47,7 +47,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install aiohttp
+        run: pip install aiohttp requests urllib3
 
       - name: Run scraping script
         working-directory: iptv
@@ -55,6 +55,18 @@ jobs:
           EXTRA_SOURCES: ${{ github.event.inputs.sources }}
           MAX_PER_CHANNEL: ${{ github.event.inputs.max_per_channel || '3' }}
         run: python iptv.py
+
+      - name: Secondary verify (re-check the generated list)
+        env:
+          SRC_TXT: '-'
+          SRC_M3U: ./iptv/best_sorted.m3u
+          OUT_TXT: /tmp/verified.txt
+          OUT_M3U: /tmp/verified.m3u
+          REPORT: iptv/verify-report.json
+        run: |
+          rm -f /tmp/verified.txt /tmp/verified.m3u iptv/verify-report.json
+          python scripts/check_streams.py || echo "复验脚本退出码 $?（保护触发时保留采集结果）"
+          python scripts/publish_verified.py
 
       - name: Update run time and links
         run: |
@@ -71,7 +83,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add iptv/README.md iptv/best_sorted.m3u iptv/best_sorted.m3u8
-          git add -f iptv/check-report.json 2>/dev/null || true
+          git add -f iptv/check-report.json iptv/verify-report.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "本轮没有变更，跳过提交"
@@ -88,9 +100,9 @@ jobs:
             git fetch origin main
             git merge -X ours --no-edit origin/main || {
               echo "自动合并失败，保留本次生成物"
-              git checkout --ours -- iptv/best_sorted.m3u iptv/best_sorted.m3u8 iptv/check-report.json 2>/dev/null || true
+              git checkout --ours -- iptv/best_sorted.m3u iptv/best_sorted.m3u8 iptv/check-report.json iptv/verify-report.json 2>/dev/null || true
               git add iptv/best_sorted.m3u iptv/best_sorted.m3u8 2>/dev/null || true
-              git add -f iptv/check-report.json 2>/dev/null || true
+              git add -f iptv/check-report.json iptv/verify-report.json 2>/dev/null || true
               git commit -m "合并：保留本次生成物 ${GET_TIME}" || true
             }
             sleep $((i * 3))

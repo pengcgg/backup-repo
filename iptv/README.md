@@ -27,11 +27,28 @@
 5. **体积上限**：单次拉取超过 `MAX_BYTES`（默认 8MB）直接放弃，源站返回巨型错误页不会拖垮任务。
 6. **推送重试**：生成物提交失败会先 `fetch` + 合并远端再重推，最多 3 次；冲突时保留本次生成物。
 
+### 第二轮复验（只发布复验通过的）
+
+采集脚本跑完后，同一份 `best_sorted.m3u` 会再被 `scripts/check_streams.py` 走一遍完整的两阶段下钻：
+
+```
+采集 + 首轮验真 → best_sorted.m3u
+        ↓
+二级复验（主地址 → 内容类型 → 主列表 → 子列表 → 首个分片）
+        ↓
+只保留复验通过的 → 覆盖 best_sorted.m3u / .m3u8
+```
+
+- 复验会顺带按 URL 去重：同一个地址挂了多个频道名（串台）的，只保留第一条。
+- 复验后条数低于原来的 `MIN_KEEP_RATIO`（默认 50%）或一条不剩时，**判定为复验器/网络抽风，不替换**，保留本轮采集结果，避免把列表砍空。
+- 台标、分组、多源备用全部原样保留（同一频道多条不同地址不会被合并）。
+- 复验结果写在 `verify-report.json`，采集阶段的源抓取情况写在 `check-report.json`。
+
 每轮会写一份 `check-report.json`：各源抓取情况、有效/失效数、失效率、失效原因 TOP、本轮参数。Actions 里也会作为 artifact 上传。
 
 ## ⚙️ 可调参数（环境变量）
 
-都在 `.github/workflows/iptv.yml` 的 `env:` 里，删掉也能跑（有默认值）。
+都在 `.github/workflows/iptv-merged.yml` 的 `env:` 里，删掉也能跑（有默认值）。
 
 | 变量 | 默认 | 说明 |
 |---|---|---|
@@ -47,6 +64,7 @@
 | `MIN_RATIO` | 0.05 | 有效率低于此值触发保护 |
 | `MIN_ITEMS` | 20 | 有效条目少于此值触发保护 |
 | `PROTECT_EXIT_CODE` | 0 | 保护时是否让 CI 标红 |
+| `MIN_KEEP_RATIO` | 0.5 | 二级复验后条数占原条数的比例，低于此值不替换产物 |
 | `EXTRA_SOURCES` | 空 | 追加源，逗号分隔 |
 
 手动 Run 时也可以在 `sources` 输入框里临时追加源。
@@ -77,14 +95,15 @@ https://pengcgg.github.io/backup-repo/
 ## 🧪 本地自测
 
 ```bash
-pip install aiohttp
+cd iptv
+pip install aiohttp requests
 
 # 验真器单测：好源判活、死链/网页/404 判死
 python3 tests/test_probe.py
 
-# 端到端：需要先在 tests/fixtures 起一个静态服务
+# 端到端：需要先在 tests/fixtures 起一个静态服务（另开一个终端）
 cd tests/fixtures && python3 -m http.server 8765 &
-cd ../.. && python3 tests/test_pipeline.py
+cd .. && python3 tests/test_pipeline.py
 ```
 
 ---

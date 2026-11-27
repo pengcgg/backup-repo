@@ -138,12 +138,39 @@ def get_session():
     return s
 
 
+def read_local_bytes(path):
+    """读取本地文件（供离线复验自产列表使用），返回 (ok, bytes 或 错误说明)。"""
+    p = path[len("file://"):] if path.startswith("file://") else path
+    try:
+        with open(p, "rb") as f:
+            data = f.read(MAX_BYTES + 1)
+    except OSError as e:
+        return False, "本地文件不可读: %s" % e
+    if len(data) > MAX_BYTES:
+        log("  !! %s 超过 %dMB，已放弃" % (p, MAX_BYTES // (1024 * 1024)))
+        return False, "文件过大(>%dMB)" % (MAX_BYTES // (1024 * 1024))
+    return True, data
+
+
+def is_local_source(url):
+    """判断输入是不是本地文件：file:// 、绝对路径、相对路径都算。"""
+    if url.startswith("file://") or url.startswith("/") or url.startswith("./"):
+        return True
+    if url.startswith("../"):
+        return True
+    return "://" not in url
+
+
 def fetch_bytes(url, timeout=TIMEOUT, retries=RETRIES, referer=""):
     """拉取一个文本类资源，返回 (ok, bytes 或 错误说明)。
 
     流式读取并设上限（MAX_BYTES）：源站返回巨大文件/巨型错误页时不会把整块内容
     读进内存拖垮任务，超限按失败处理且不重试。
+    支持 file:// 或本地绝对/相对路径，直接用本地文件当源。
     """
+    if is_local_source(url):
+        return read_local_bytes(url)
+
     last = "unknown"
     headers = {"User-Agent": UA_BROWSER, "Accept": "*/*"}
     if referer:
@@ -567,19 +594,32 @@ def derive_m3u8_url(txt_url):
 
 def main():
     log("=== 直播源检查开始 ===")
-    log("txt 源: %s" % SRC_TXT)
 
-    ok_txt, data_txt = fetch_bytes(SRC_TXT)
-    if not ok_txt:
-        log("!! 无法获取 txt 源: %s" % data_txt)
-        log("!! 保留现有文件不改动，退出。")
-        return 0
-
-    txt_items = parse_txt(decode_bytes(data_txt))
-    log("txt 解析到 %d 条" % len(txt_items))
+    txt_items = []
+    txt_enabled = bool(SRC_TXT.strip()) and SRC_TXT.strip() != "-"
+    if txt_enabled:
+        log("txt 源: %s" % SRC_TXT)
+        ok_txt, data_txt = fetch_bytes(SRC_TXT)
+        if ok_txt:
+            txt_items = parse_txt(decode_bytes(data_txt))
+            log("txt 解析到 %d 条" % len(txt_items))
+        else:
+            log("!! 无法获取 txt 源: %s" % data_txt)
+            if not SRC_M3U.strip():
+                log("!! 没有可用的 m3u 源兜底，保留现有文件不改动，退出。")
+                return 0
+            log("!! 改用 m3u 源继续")
+    else:
+        log("txt 源已禁用（SRC_TXT 为空或 -），仅使用 m3u 源")
 
     m3u_items = []
-    m3u_url = SRC_M3U.strip() or derive_m3u_url(SRC_TXT)
+    if SRC_M3U.strip():
+        m3u_url = SRC_M3U.strip()
+    elif txt_enabled:
+        m3u_url = derive_m3u_url(SRC_TXT)
+    else:
+        log("!! 没有给出任何输入源，保留现有文件不改动，退出。")
+        return 0
     log("m3u 源: %s" % m3u_url)
     ok_m3u, data_m3u = fetch_bytes(m3u_url)
     if not ok_m3u and not SRC_M3U.strip():
