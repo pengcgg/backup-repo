@@ -1,0 +1,153 @@
+name: 解压 ZIP 到仓库根目录
+
+# 手动触发：仓库页面 -> Actions -> 解压 ZIP 到仓库根目录 -> Run workflow
+on:
+  workflow_dispatch:
+    inputs:
+      zip_path:
+        description: "仓库内的 zip 路径（相对仓库根目录）"
+        required: false
+        default: "juhe-stream-checker.zip"
+      zip_url:
+        description: "可选：zip 直链下载地址（填了就忽略上面的本地文件）"
+        required: false
+        default: ""
+      strip_top_dir:
+        description: "zip 里如果有单一顶层目录，是否把里面的内容提到根目录"
+        type: choice
+        options:
+          - auto
+          - always
+          - never
+        default: auto
+      delete_zip:
+        description: "解压后删除仓库里那份 zip"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: unpack-zip
+  cancel-in-progress: false
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+        with:
+          # 解压内容如果包含 .github/workflows/ 下的文件，GITHUB_TOKEN 无权推送，
+          # 需要在仓库 Secrets 里配一个 PUSH_TOKEN（带 repo + workflow 权限）。
+          token: ${{ secrets.PUSH_TOKEN != '' && secrets.PUSH_TOKEN || github.token }}
+          fetch-depth: 0
+
+      - name: 解压并铺到仓库根目录
+        env:
+          ZIP_PATH: ${{ inputs.zip_path }}
+          ZIP_URL: ${{ inputs.zip_url }}
+          STRIP_MODE: ${{ inputs.strip_top_dir }}
+          DELETE_ZIP: ${{ inputs.delete_zip }}
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+
+          WORK="$(mktemp -d)"
+          ZIP_FILE="$WORK/pkg.zip"
+
+          if [ -n "${ZIP_URL}" ]; then
+            echo "从链接下载压缩包: ${ZIP_URL}"
+            curl -fsSL --retry 3 --retry-delay 2 -o "$ZIP_FILE" "$ZIP_URL"
+            SRC_LABEL="$ZIP_URL"
+          else
+            ZIP_PATH="${ZIP_PATH:-juhe-stream-checker.zip}"
+            if [ ! -f "$WORKSPACE/$ZIP_PATH" ]; then
+              echo "::error::仓库里找不到 $ZIP_PATH，先把 zip 提交进仓库，或用 zip_url 填直链"
+              exit 1
+            fi
+            cp "$WORKSPACE/$ZIP_PATH" "$ZIP_FILE"
+            SRC_LABEL="$ZIP_PATH"
+          fi
+
+          # 完整性校验
+          if ! unzip -tq "$ZIP_FILE" >/dev/null; then
+            echo "::error::压缩包损坏，或者根本不是 zip"
+            exit 1
+          fi
+
+          RAW="$WORK/raw"
+          mkdir -p "$RAW"
+          unzip -q -o "$ZIP_FILE" -d "$RAW"
+
+          # 清理垃圾文件与符号链接，防止路径穿越覆盖仓库外的东西
+          find "$RAW" -type d -name '__MACOSX' -prune -exec rm -rf {} + 2>/dev/null || true
+          find "$RAW" \( -name '.DS_Store' -o -name 'Thumbs.db' \) -delete 2>/dev/null || true
+          find "$RAW" -type l -delete 2>/dev/null || true
+          rm -rf "$RAW/.git"
+
+          # 顶层只有一个目录时剥一层，让文件真正落到根目录
+          SRC="$RAW"
+          ENTRIES="$(find "$RAW" -mindepth 1 -maxdepth 1 | wc -l)"
+          DIRS="$(find "$RAW" -mindepth 1 -maxdepth 1 -type d | wc -l)"
+          if { [ "$STRIP_MODE" = "always" ] && [ "$DIRS" -ge 1 ]; } || \
+             { [ "$STRIP_MODE" = "auto" ] && [ "$ENTRIES" -eq 1 ] && [ "$DIRS" -eq 1 ]; }; then
+            SRC="$(find "$RAW" -mindepth 1 -maxdepth 1 -type d | sort | head -n 1)"
+            echo "剥掉顶层目录: $(basename "$SRC")"
+          fi
+
+          if [ -z "$(find "$SRC" -mindepth 1 -maxdepth 1 -print -quit)" ]; then
+            echo "::error::压缩包是空的，什么都没解出来"
+            exit 1
+          fi
+
+          echo "=== 将要写入的文件 ==="
+          find "$SRC" -type f | sed "s|^$SRC/||" | sort
+
+          # 铺到仓库根目录（保留隐藏文件与目录结构）
+          COPYFILE_DISABLE=1 tar -C "$SRC" -cf - . | tar -C "$WORKSPACE" -xpf -
+
+          if [ "${DELETE_ZIP}" = "true" ] && [ -z "${ZIP_URL}" ]; then
+            rm -f "$WORKSPACE/$ZIP_PATH"
+            echo "已删除仓库里的 $ZIP_PATH"
+          fi
+
+          {
+            echo "### 解压完成"
+            echo ""
+            echo "- 来源：\`$SRC_LABEL\`"
+            echo "- 文件数：$(find "$SRC" -type f | wc -l)"
+            echo ""
+            echo '```'
+            find "$SRC" -type f | sed "s|^$SRC/||" | sort | head -n 200
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 提交并推送
+        env:
+          WORKSPACE: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          cd "$WORKSPACE"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          echo "=== git status ==="
+          git status --porcelain
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "内容没有变化，不需要提交"
+            exit 0
+          fi
+
+          git commit -m "chore: 解压压缩包到仓库根目录 ($(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M')) [skip ci]"
+
+          if ! git push; then
+            echo "::error::推送失败。如果这次解压改到了 .github/workflows/ 下的文件，GITHUB_TOKEN 没有这个权限：去仓库 Settings -> Secrets and variables -> Actions 新建 PUSH_TOKEN（个人令牌，带 repo + workflow 权限），本 workflow 会自动用它。"
+            exit 1
+          fi
+
+          echo "推送完成"
