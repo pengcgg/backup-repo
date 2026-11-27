@@ -23,6 +23,8 @@
   KEEP_NON_HTTP 1=rtmp/rtsp 等非 http 源未验证保留（默认 1）
   MIN_RATIO  有效率保护阈值（默认 0.05，设为 0 关闭）
   MIN_ITEMS  条目数达到多少才启用保护（默认 20）
+  MAX_BYTES  单次拉取体积上限字节数（默认 8388608 = 8MB）
+  PROTECT_EXIT_CODE 保护触发时的退出码（默认 0，CI 不标红；本地判状态可设 2）
   REPORT     报告 json 落盘路径（可选）
 """
 
@@ -33,7 +35,7 @@ import json
 import time
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, urlsplit, urlunsplit
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -89,12 +91,16 @@ DEEP = env("DEEP", "1") not in ("0", "false", "False", "no")
 MIN_RATIO = env_float("MIN_RATIO", 0.05)
 MIN_ITEMS = env_int("MIN_ITEMS", 20)
 REPORT = env("REPORT", "")
+# 保护机制触发时的退出码。默认 0：这是"源站异常、原样保留"的正常保护，
+# 不该让 GitHub Actions 标红并发失败邮件。本地想用脚本判状态时设成 2。
+PROTECT_EXIT_CODE = max(0, env_int("PROTECT_EXIT_CODE", 0))
 
 # 速度相关（都可用环境变量覆盖）
 CONNECT_TIMEOUT = max(2, env_int("CONNECT_TIMEOUT", 4))   # 建连超时，坏域名不拖时间
 DEEP_WORKERS = max(1, env_int("DEEP_WORKERS", 24))         # 第二阶段的并发
 SEC_PER_URL_CAP = max(5, env_int("SEC_PER_URL_CAP", 20))   # 单条 URL 总耗时上限
 FAST_BYTES = max(1024, env_int("FAST_BYTES", 4096))        # 首包只读这么多（Range 请求）
+MAX_BYTES = max(65536, env_int("MAX_BYTES", 8 * 1024 * 1024))  # 单次拉取的体积上限，防源站抽风灌爆内存
 KEEP_NON_HTTP = env("KEEP_NON_HTTP", "1") not in ("0", "false", "False", "no")
 
 # ------------------------------------------------------------------ 工具
@@ -133,7 +139,11 @@ def get_session():
 
 
 def fetch_bytes(url, timeout=TIMEOUT, retries=RETRIES, referer=""):
-    """拉取一个文本类资源，返回 (ok, bytes 或 错误说明)。"""
+    """拉取一个文本类资源，返回 (ok, bytes 或 错误说明)。
+
+    流式读取并设上限（MAX_BYTES）：源站返回巨大文件/巨型错误页时不会把整块内容
+    读进内存拖垮任务，超限按失败处理且不重试。
+    """
     last = "unknown"
     headers = {"User-Agent": UA_BROWSER, "Accept": "*/*"}
     if referer:
@@ -141,14 +151,29 @@ def fetch_bytes(url, timeout=TIMEOUT, retries=RETRIES, referer=""):
     for attempt in range(retries + 1):
         try:
             r = get_session().get(
-                url, headers=headers, timeout=(CONNECT_TIMEOUT, timeout), allow_redirects=True
+                url, headers=headers, timeout=(CONNECT_TIMEOUT, timeout),
+                stream=True, allow_redirects=True,
             )
-            if r.status_code >= 400:
-                last = "HTTP %d" % r.status_code
-                if attempt < retries:
-                    time.sleep(1.0 * (attempt + 1))
-                continue
-            return True, r.content
+            try:
+                if r.status_code >= 400:
+                    last = "HTTP %d" % r.status_code
+                    if attempt < retries:
+                        time.sleep(1.0 * (attempt + 1))
+                    continue
+                buf = bytearray()
+                for chunk in r.iter_content(65536):
+                    if not chunk:
+                        continue
+                    buf.extend(chunk)
+                    if len(buf) > MAX_BYTES:
+                        break
+            finally:
+                r.close()
+            if len(buf) > MAX_BYTES:
+                last = "响应过大(>%dMB)" % (MAX_BYTES // (1024 * 1024))
+                log("  !! %s 返回超过 %dMB，已放弃" % (url, MAX_BYTES // (1024 * 1024)))
+                return False, last
+            return True, bytes(buf)
         except requests.exceptions.Timeout:
             last = "超时"
         except requests.exceptions.SSLError:
@@ -520,14 +545,24 @@ def write_if_changed(path, content):
 # ------------------------------------------------------------------ 主流程
 
 
+def swap_ext(url, new_ext):
+    """把 URL 路径部分的扩展名换成 new_ext，scheme/域名/查询参数/锚点全部原样保留。
+
+    直接对整串做 os.path.splitext 会在 `xxx/juhe29.txt?token=abc` 这种带参数的源上
+    把 query 一起吞掉，推出一个不存在的 `xxx/juhe29.m3u`。
+    """
+    parts = urlsplit(url)
+    root, ext = os.path.splitext(parts.path)
+    path = (root if ext else parts.path) + new_ext
+    return urlunsplit((parts.scheme, parts.netloc, path, parts.query, parts.fragment))
+
+
 def derive_m3u_url(txt_url):
-    base, _ = os.path.splitext(txt_url)
-    return base + ".m3u"
+    return swap_ext(txt_url, ".m3u")
 
 
 def derive_m3u8_url(txt_url):
-    base, _ = os.path.splitext(txt_url)
-    return base + ".m3u8"
+    return swap_ext(txt_url, ".m3u8")
 
 
 def main():
@@ -636,10 +671,11 @@ def main():
     if len(alive) == 0 or protected:
         log("!! 有效率 %.1f%% 低于保护阈值 %.1f%%（或全部失效），判定为源站/网络异常。"
             % (ratio * 100, MIN_RATIO * 100))
-        log("!! 本次不覆盖已有文件，退出码 2。确认是源本身大量失效的话，"
+        log("!! 本次不覆盖已有文件（这是正常保护，不是故障）。确认是源本身大量失效的话，"
             "把 MIN_RATIO 环境变量设为 0 再跑一次。")
         write_report(total, alive, dead, results, ratio, protected=True)
-        return 2
+        log("退出码 %d（PROTECT_EXIT_CODE，默认 0 避免 CI 误报失败）" % PROTECT_EXIT_CODE)
+        return PROTECT_EXIT_CODE
 
     log("删除失效 %d 条，保留有效 %d 条" % (len(dead), len(alive)))
     for it, (_, reason) in sorted(

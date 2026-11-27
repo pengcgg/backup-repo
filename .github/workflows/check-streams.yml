@@ -67,6 +67,10 @@ jobs:
           KEEP_NON_HTTP: "1"
           MIN_ITEMS: "20"
           REPORT: check-report.json
+          # 单次拉取体积上限（8MB），防源站抽风返回巨型错误页灌爆内存
+          MAX_BYTES: "8388608"
+          # 保护机制触发时的退出码：0=CI 不标红（默认）；想用脚本判状态就设成 2
+          PROTECT_EXIT_CODE: "0"
           DEEP: ${{ github.event.inputs.deep || '1' }}
           MIN_RATIO: ${{ github.event.inputs.min_ratio || '0.05' }}
         run: python scripts/check_streams.py
@@ -84,7 +88,24 @@ jobs:
             exit 0
           fi
           git commit -m "chore: 清理失效直播源 $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M')"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          # 推送冲突重试：期间可能有别人的提交进来，先合并远端再推；
+          # 生成物冲突时保留本次结果（-X ours），其余改动照常合并。
+          for i in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "推送成功（第 $i 次尝试）"
+              exit 0
+            fi
+            echo "推送失败（第 $i 次尝试），拉取远端后重试"
+            git fetch origin "${GITHUB_REF_NAME}" || sleep 5
+            git merge -X ours --no-edit -m "merge remote changes before push" \
+              "origin/${GITHUB_REF_NAME}" || {
+                echo "::warning::合并远端失败，本次改动未推送（下轮会重新生成）"
+                exit 0
+              }
+            sleep $((i * 3))
+          done
+          echo "::error::连续 3 次推送失败，检查分支保护或 Workflow 写权限设置"
+          exit 1
 
       - name: 上传产物
         if: always()
