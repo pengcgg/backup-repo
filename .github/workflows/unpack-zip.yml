@@ -7,7 +7,7 @@ on:
       zip_path:
         description: "仓库内的 zip 路径（相对仓库根目录）"
         required: false
-        default: "juhe-stream-checker.zip"
+        default: "juhe-stream-checker 2.zip"
       zip_url:
         description: "可选：zip 直链下载地址（填了就忽略上面的本地文件）"
         required: false
