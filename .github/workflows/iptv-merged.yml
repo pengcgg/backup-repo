@@ -1,0 +1,99 @@
+name: IPTV 采集+验真（合并版）
+
+on:
+  schedule:
+    - cron: '20 */4 * * *'
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: '额外源地址（逗号分隔，可留空）'
+        required: false
+        default: ''
+      max_per_channel:
+        description: '每个频道最多保留几条源'
+        required: false
+        default: '3'
+
+permissions:
+  contents: write
+
+env:
+  TZ: Asia/Shanghai
+  WORKERS: '40'
+  DEEP_WORKERS: '30'
+  DEEP: '1'
+  TIMEOUT: '10'
+  RETRIES: '1'
+  MAX_PER_CHANNEL: '3'
+  MIN_RATIO: '0.05'
+  MIN_ITEMS: '20'
+  PROTECT_EXIT_CODE: '0'
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: iptv-merged
+      cancel-in-progress: false
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install aiohttp
+
+      - name: Run scraping script
+        working-directory: iptv
+        env:
+          EXTRA_SOURCES: ${{ github.event.inputs.sources }}
+          MAX_PER_CHANNEL: ${{ github.event.inputs.max_per_channel || '3' }}
+        run: python iptv.py
+
+      - name: Update run time and links
+        run: |
+          GET_TIME=$(date +'%Y-%m-%d %H:%M:%S CST')
+          echo "GET_TIME=${GET_TIME}" >> $GITHUB_ENV
+          BASE="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/refs/heads/main/iptv"
+          sed -i "s|<!-- Last Run Time -->.*|<!-- Last Run Time --> ${GET_TIME}|" iptv/README.md
+          sed -i "s|<!-- Generated File Link M3U -->.*|<!-- Generated File Link M3U --> [View M3U File](${BASE}/best_sorted.m3u)|" iptv/README.md
+          sed -i "s|<!-- Generated File Link M3U8 -->.*|<!-- Generated File Link M3U8 --> [View M3U8 File](${BASE}/best_sorted.m3u8)|" iptv/README.md
+
+      - name: Commit and push (with retry)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add iptv/README.md iptv/best_sorted.m3u iptv/best_sorted.m3u8
+          git add -f iptv/check-report.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "本轮没有变更，跳过提交"
+            exit 0
+          fi
+          git commit -m "自动更新(iptv)：${GET_TIME}"
+
+          for i in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "PUSH_OK（第 $i 次）"
+              exit 0
+            fi
+            echo "推送冲突，第 $i 次：先同步远端再重推"
+            git fetch origin main
+            git merge -X ours --no-edit origin/main || {
+              echo "自动合并失败，保留本次生成物"
+              git checkout --ours -- iptv/best_sorted.m3u iptv/best_sorted.m3u8 iptv/check-report.json 2>/dev/null || true
+              git add iptv/best_sorted.m3u iptv/best_sorted.m3u8 2>/dev/null || true
+              git add -f iptv/check-report.json 2>/dev/null || true
+              git commit -m "合并：保留本次生成物 ${GET_TIME}" || true
+            }
+            sleep $((i * 3))
+          done
+          echo "PUSH_FAILED：三次重试仍未推上去"
+          exit 1
