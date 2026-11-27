@@ -45,8 +45,8 @@ jobs:
 
       - name: 检查并重新生成
         env:
-          SRC_TXT: http://luobuqingcai.hostingem.ru/zb/juhe29.txt
-          SRC_M3U: http://luobuqingcai.hostingem.ru/zb/juhe29.m3u
+          SRC_TXT: https://raw.githubusercontent.com/pengcgg/backup-repo/main/juhe29.txt
+          SRC_M3U: 
           OUT_TXT: juhe29.txt
           OUT_M3U: juhe29.m3u
           WORKERS: "16"
