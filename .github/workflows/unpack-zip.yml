@@ -41,7 +41,7 @@ jobs:
         with:
           # 解压内容如果包含 .github/workflows/ 下的文件，GITHUB_TOKEN 无权推送，
           # 需要在仓库 Secrets 里配一个 PUSH_TOKEN（带 repo + workflow 权限）。
-          token: ${{ secrets.PUSH_TOKEN != '' && secrets.PUSH_TOKEN || github.token }}
+          token: ${{ secrets.xiaofu1 != '' && secrets.xiaofu1 || github.token }}
           fetch-depth: 0
 
       - name: 解压并铺到仓库根目录
