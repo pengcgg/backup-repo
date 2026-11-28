@@ -1,6 +1,5 @@
 💫组播央卫,#genre#
 CCTV1,http://17782331118.top:8188/rtp/235.254.199.51:7980
-CCTV4,http://17782331118.top:8188/rtp/235.254.199.183:7980
 
 💫河南频道,#genre#
 驻马店公共,https://p2hs.vzan.com/slowlive/692736859757132846/live.m3u8
@@ -61,10 +60,7 @@ Q版三国,http://cfss.cc/cdn/huya/29465871.flv
 辽宁体育,http://120.76.248.139/live/bfgd/4200000611.m3u8
 
 💫电视剧频道_520,#genre#
-插翅难逃,http://8.155.43.98:35455/yy/23402146
-射雕英雄传83版,http://8.155.43.98:35455/yy/1354210357
 神雕侠侣,http://8.155.43.98:35455/yy/1351762426
-隋唐英雄传,http://8.155.43.98:35455/yy/1352475619
 还珠格格,http://cfss.cc/cdn/huya/30080241.flv
 雪豹电视轮播,http://cfss.cc/cdn/huya/29580970.flv
 寻秦记播频道,http://cfss.cc/cdn/huya/29465848.flv
@@ -204,15 +200,10 @@ YY轮播16,http://8.155.43.98:35455/yy/1382745087
 YY轮播17,http://8.155.43.98:35455/yy/1382745088
 
 💫明星轮播_520,#genre#
-成龙轮播,http://222.186.39.21:35466/huya/11342386
 李连杰轮播,http://222.186.39.21:35466/huya/11342390
-甄子丹轮播,http://222.186.39.21:35466/huya/11352935
 周星星轮播,http://222.186.39.21:35466/huya/11336587
-梁家辉轮播,http://222.186.39.21:35466/huya/11342429
 五福星轮播,http://222.186.39.21:35466/huya/11282233
-怪兽轮播,http://222.186.39.21:35466/huya/21059577
 罪犯轮播,http://222.186.39.21:35466/huya/11352962
-枪战轮播,http://222.186.39.21:35466/huya/21059579
 成龙轮播,http://cfss.cc/cdn/huya/11342386.flv
 放映厅轮播,http://cfss.cc/cdn/huya/11602077.flv
 刘德华轮播,http://cfss.cc/cdn/huya/11342424.flv
@@ -249,7 +240,6 @@ YY轮播17,http://8.155.43.98:35455/yy/1382745088
 古墓系列频道,http://222.186.39.21:35466/huya/11352913
 国产悬疑频道,http://cfss.cc/cdn/huya/11342395.flv
 快意江湖频道,http://222.186.39.21:35466/huya/11342435
-创世纪轮播,http://222.186.39.21:35466/huya/29465852
 如懿传轮播,http://222.186.39.21:35466/huya/29465868
 梦华录轮播,http://222.186.39.21:35466/huya/11336590
 乡村爱情,http://cfss.cc/cdn/huya/30080255.flv
@@ -430,47 +420,27 @@ CCTV3,http://800128.xyz:62888/rtp/233.18.204.22:5140
 CCTV4,http://800128.xyz:62888/rtp/233.18.204.23:5140
 CCTV4,http://800128.xyz:62888/rtp/233.18.204.70:5140
 CCTV5,http://800128.xyz:62888/rtp/233.18.204.24:5140
-CCTV5,http://800128.xyz:62888/rtp/233.18.204.71:5140
 CCTV6,http://800128.xyz:62888/rtp/233.18.204.25:5140
-CCTV6,http://800128.xyz:62888/rtp/233.18.204.72:5140
 CCTV7,http://800128.xyz:62888/rtp/233.18.204.73:5140
 CCTV10,http://800128.xyz:62888/rtp/233.18.204.76:5140
-CCTV11,http://800128.xyz:62888/rtp/233.18.204.30:5140
-CCTV11,http://800128.xyz:62888/rtp/233.18.204.77:5140
 CCTV13,http://800128.xyz:62888/rtp/233.18.204.32:5140
 CCTV15,http://800128.xyz:62888/rtp/233.18.204.81:5140
 CCTV17,http://800128.xyz:62888/rtp/233.18.204.83:5140
 央广购物,http://800128.xyz:62888/rtp/233.18.204.15:5140
 CETV1,http://800128.xyz:62888/rtp/233.18.204.98:5140
 CETV早期教育,http://800128.xyz:62888/rtp/233.18.204.187:5140
-江苏卫视,http://800128.xyz:62888/rtp/233.18.204.85:5140
-浙江卫视,http://800128.xyz:62888/rtp/233.18.204.121:5140
-旅游卫视,http://800128.xyz:62888/rtp/233.18.204.122:5140
-广西卫视,http://800128.xyz:62888/rtp/233.18.204.107:5140
-天津卫视,http://800128.xyz:62888/rtp/233.18.204.97:5140
 江西卫视,http://800128.xyz:62888/rtp/233.18.204.95:5140
 西藏卫视,http://800128.xyz:62888/rtp/233.18.204.134:5140
 陕西卫视,http://800128.xyz:62888/rtp/233.18.204.135:5140
 云南卫视,http://800128.xyz:62888/rtp/233.18.204.106:5140
 甘肃卫视,http://800128.xyz:62888/rtp/233.18.204.137:5140
-河北卫视,http://800128.xyz:62888/rtp/233.18.204.103:5140
 东方购物,http://800128.xyz:62888/rtp/233.18.204.10:5140
-家庭理财,http://800128.xyz:62888/rtp/233.18.204.157:5140
-金鹰卡通,http://800128.xyz:62888/rtp/233.18.204.150:5140
 卡酷少儿,http://800128.xyz:62888/rtp/233.18.204.152:5140
-上海教育,http://800128.xyz:62888/rtp/233.18.204.11:5140
 新闻综合,http://800128.xyz:62888/rtp/233.18.204.57:5140
-新闻综合,http://800128.xyz:62888/rtp/233.18.204.189:5140
 第一财经,http://800128.xyz:62888/rtp/233.18.204.59:5140
-东方购物1,http://800128.xyz:62888/rtp/233.18.204.61:5140
-东方购物2,http://800128.xyz:62888/rtp/233.18.204.62:5140
 CHC动作电影,http://800128.xyz:62888/rtp/233.18.204.174:5140
 兵器科技,http://800128.xyz:62888/rtp/233.18.204.178:5140
-高尔夫网球,http://800128.xyz:62888/rtp/233.18.204.181:5140
-金鹰纪实,http://800128.xyz:62888/rtp/233.18.204.104:5140
 女性时尚,http://800128.xyz:62888/rtp/233.18.204.180:5140
-百事通画面,http://800128.xyz:62888/rtp/233.18.204.158:5140
-CCTV4-4K,http://800128.xyz:62888/rtp/233.18.204.188:5140
 东方卫视4K50FPS,http://800128.xyz:62888/rtp/233.18.204.224:5140
 湖南卫视4K50FPS,http://800128.xyz:62888/rtp/233.18.204.227:5140
 山东卫视4K50FPS,http://800128.xyz:62888/rtp/233.18.204.228:5140
@@ -546,7 +516,6 @@ BesTV4K动画,http://800128.xyz:62888/rtp/233.18.204.171:5140
 💫央视,#genre#
 CCTV1,http://www.frankgb.cn:4022/udp/239.49.8.19:9614
 CCTV2,http://www.frankgb.cn:4022/udp/239.49.8.50:9802
-CCTV3,http://www.frankgb.cn:4022/udp/239.49.8.74:8000
 CCTV4,http://www.frankgb.cn:4022/udp/239.49.8.51:9806
 CCTV6,http://www.frankgb.cn:4022/udp/239.49.8.76:8000
 CCTV7,http://www.frankgb.cn:4022/udp/239.49.0.126:8000
@@ -555,14 +524,9 @@ CCTV8,http://www.frankgb.cn:4022/udp/239.49.8.77:8000
 💫卫视,#genre#
 浙江卫视,http://ali-xwl.cztv.com/live/channel4k2160p.m3u8
 广东卫视,http://www.frankgb.cn:4022/udp/239.49.8.13:9422
-山西卫视,http://www.frankgb.cn:4022/udp/239.49.1.55:8000
-安徽卫视,http://www.frankgb.cn:4022/udp/239.49.8.80:8000
 重庆卫视,http://www.frankgb.cn:4022/udp/239.49.8.57:9830
-河北卫视,http://www.frankgb.cn:4022/udp/239.49.8.114:8000
-吉林卫视,http://www.frankgb.cn:4022/udp/239.49.8.113:8000
 青海卫视,http://www.frankgb.cn:4022/udp/239.49.0.81:8000
 宁夏卫视,http://www.frankgb.cn:4022/udp/239.49.1.60:8000
-三沙卫视,http://www.frankgb.cn:4022/udp/239.49.0.167:8000
 兵团卫视,http://www.frankgb.cn:4022/udp/239.49.1.58:8000
 
 💫电影,#genre#
@@ -1287,7 +1251,6 @@ Extrema TV (720p),http://livestreamcdn.net:1935/ExtremaTV/ExtremaTV/playlist.m3u
 衢州龙游生活,https://l.cztvcloud.com/channels/lantian/SXlongyou2/720p.m3u8
 衢州龙游综合,https://l.cztvcloud.com/channels/lantian/SXlongyou1/720p.m3u8
 衢州衢江综合,http://l.cztvcloud.com/channels/lantian/SXqujiang1/720p.m3u8
-丽水松阳综合,http://l.cztvcloud.com/channels/lantian/SXsongyang1/720p.m3u8
 丽水遂昌综合,http://l.cztvcloud.com/channels/lantian/SXsuichang1/720p.m3u8
 丽水云和综合,http://l.cztvcloud.com/channels/lantian/SXyunhe1/720p.m3u8
 萧山综合,http://l.cztvcloud.com/channels/lantian/SXxiaoshan3/720p.m3u8

@@ -1,20 +1,13 @@
 {
-  "total": 1834,
-  "alive": 1775,
-  "dead": 59,
-  "ratio": 0.9678,
+  "total": 1775,
+  "alive": 1738,
+  "dead": 37,
+  "ratio": 0.9792,
   "protected": false,
   "items": [
     {
       "name": "CCTV1",
       "url": "http://17782331118.top:8188/rtp/235.254.199.51:7980",
-      "group": "💫组播央卫",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "CCTV4",
-      "url": "http://17782331118.top:8188/rtp/235.254.199.183:7980",
       "group": "💫组播央卫",
       "ok": true,
       "reason": "ok"
@@ -370,29 +363,8 @@
       "reason": "ok"
     },
     {
-      "name": "插翅难逃",
-      "url": "http://8.155.43.98:35455/yy/23402146",
-      "group": "💫电视剧频道_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "射雕英雄传83版",
-      "url": "http://8.155.43.98:35455/yy/1354210357",
-      "group": "💫电视剧频道_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "神雕侠侣",
       "url": "http://8.155.43.98:35455/yy/1351762426",
-      "group": "💫电视剧频道_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "隋唐英雄传",
-      "url": "http://8.155.43.98:35455/yy/1352475619",
       "group": "💫电视剧频道_520",
       "ok": true,
       "reason": "ok"
@@ -1343,22 +1315,8 @@
       "reason": "ok"
     },
     {
-      "name": "成龙轮播",
-      "url": "http://222.186.39.21:35466/huya/11342386",
-      "group": "💫明星轮播_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "李连杰轮播",
       "url": "http://222.186.39.21:35466/huya/11342390",
-      "group": "💫明星轮播_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "甄子丹轮播",
-      "url": "http://222.186.39.21:35466/huya/11352935",
       "group": "💫明星轮播_520",
       "ok": true,
       "reason": "ok"
@@ -1371,13 +1329,6 @@
       "reason": "ok"
     },
     {
-      "name": "梁家辉轮播",
-      "url": "http://222.186.39.21:35466/huya/11342429",
-      "group": "💫明星轮播_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "五福星轮播",
       "url": "http://222.186.39.21:35466/huya/11282233",
       "group": "💫明星轮播_520",
@@ -1385,22 +1336,8 @@
       "reason": "ok"
     },
     {
-      "name": "怪兽轮播",
-      "url": "http://222.186.39.21:35466/huya/21059577",
-      "group": "💫明星轮播_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "罪犯轮播",
       "url": "http://222.186.39.21:35466/huya/11352962",
-      "group": "💫明星轮播_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "枪战轮播",
-      "url": "http://222.186.39.21:35466/huya/21059579",
       "group": "💫明星轮播_520",
       "ok": true,
       "reason": "ok"
@@ -1639,13 +1576,6 @@
     {
       "name": "快意江湖频道",
       "url": "http://222.186.39.21:35466/huya/11342435",
-      "group": "💫电影频道_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "创世纪轮播",
-      "url": "http://222.186.39.21:35466/huya/29465852",
       "group": "💫电影频道_520",
       "ok": true,
       "reason": "ok"
@@ -2855,22 +2785,8 @@
       "reason": "ok"
     },
     {
-      "name": "CCTV5",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.71:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "CCTV6",
       "url": "http://800128.xyz:62888/rtp/233.18.204.25:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "CCTV6",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.72:5140",
       "group": "💫凤凰秀_520",
       "ok": true,
       "reason": "ok"
@@ -2885,20 +2801,6 @@
     {
       "name": "CCTV10",
       "url": "http://800128.xyz:62888/rtp/233.18.204.76:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "CCTV11",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.30:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "CCTV11",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.77:5140",
       "group": "💫凤凰秀_520",
       "ok": true,
       "reason": "ok"
@@ -2946,41 +2848,6 @@
       "reason": "ok"
     },
     {
-      "name": "江苏卫视",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.85:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "浙江卫视",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.121:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "旅游卫视",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.122:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "广西卫视",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.107:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "天津卫视",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.97:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "江西卫视",
       "url": "http://800128.xyz:62888/rtp/233.18.204.95:5140",
       "group": "💫凤凰秀_520",
@@ -3016,29 +2883,8 @@
       "reason": "ok"
     },
     {
-      "name": "河北卫视",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.103:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "东方购物",
       "url": "http://800128.xyz:62888/rtp/233.18.204.10:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "家庭理财",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.157:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "金鹰卡通",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.150:5140",
       "group": "💫凤凰秀_520",
       "ok": true,
       "reason": "ok"
@@ -3051,13 +2897,6 @@
       "reason": "ok"
     },
     {
-      "name": "上海教育",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.11:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "新闻综合",
       "url": "http://800128.xyz:62888/rtp/233.18.204.57:5140",
       "group": "💫凤凰秀_520",
@@ -3065,29 +2904,8 @@
       "reason": "ok"
     },
     {
-      "name": "新闻综合",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.189:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "第一财经",
       "url": "http://800128.xyz:62888/rtp/233.18.204.59:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "东方购物1",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.61:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "东方购物2",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.62:5140",
       "group": "💫凤凰秀_520",
       "ok": true,
       "reason": "ok"
@@ -3107,36 +2925,8 @@
       "reason": "ok"
     },
     {
-      "name": "高尔夫网球",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.181:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "金鹰纪实",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.104:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "女性时尚",
       "url": "http://800128.xyz:62888/rtp/233.18.204.180:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "百事通画面",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.158:5140",
-      "group": "💫凤凰秀_520",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "CCTV4-4K",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.188:5140",
       "group": "💫凤凰秀_520",
       "ok": true,
       "reason": "ok"
@@ -3583,13 +3373,6 @@
       "reason": "ok"
     },
     {
-      "name": "CCTV3",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.8.74:8000",
-      "group": "💫央视",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "CCTV4",
       "url": "http://www.frankgb.cn:4022/udp/239.49.8.51:9806",
       "group": "💫央视",
@@ -3632,36 +3415,8 @@
       "reason": "ok"
     },
     {
-      "name": "山西卫视",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.1.55:8000",
-      "group": "💫卫视",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "安徽卫视",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.8.80:8000",
-      "group": "💫卫视",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "重庆卫视",
       "url": "http://www.frankgb.cn:4022/udp/239.49.8.57:9830",
-      "group": "💫卫视",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "河北卫视",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.8.114:8000",
-      "group": "💫卫视",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "吉林卫视",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.8.113:8000",
       "group": "💫卫视",
       "ok": true,
       "reason": "ok"
@@ -3676,13 +3431,6 @@
     {
       "name": "宁夏卫视",
       "url": "http://www.frankgb.cn:4022/udp/239.49.1.60:8000",
-      "group": "💫卫视",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
-      "name": "三沙卫视",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.0.167:8000",
       "group": "💫卫视",
       "ok": true,
       "reason": "ok"
@@ -8490,13 +8238,6 @@
       "reason": "ok"
     },
     {
-      "name": "丽水松阳综合",
-      "url": "http://l.cztvcloud.com/channels/lantian/SXsongyang1/720p.m3u8",
-      "group": "🌐浙江地方",
-      "ok": true,
-      "reason": "ok"
-    },
-    {
       "name": "丽水遂昌综合",
       "url": "http://l.cztvcloud.com/channels/lantian/SXsuichang1/720p.m3u8",
       "group": "🌐浙江地方",
@@ -12431,417 +12172,263 @@
       "reason": "ok"
     },
     {
-      "name": "CCTV13",
-      "url": "http://17782331118.top:8188/rtp/235.254.197.162:7980",
+      "name": "CCTV4",
+      "url": "http://17782331118.top:8188/rtp/235.254.199.183:7980",
       "group": "💫组播央卫",
       "ok": false,
       "reason": "空响应"
     },
     {
-      "name": "CHC动作电影",
-      "url": "http://17782331118.top:8188/rtp/235.254.198.247:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "文物宝库",
-      "url": "http://17782331118.top:8188/rtp/235.254.198.132:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "江西卫视",
-      "url": "http://17782331118.top:8188/rtp/235.254.199.190:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "宁夏卫视",
-      "url": "http://17782331118.top:8188/rtp/235.254.197.138:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "新疆卫视",
-      "url": "http://17782331118.top:8188/rtp/235.254.197.178:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "金鹰卡通SD",
-      "url": "http://17782331118.top:8188/rtp/235.254.197.165:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "重庆文体娱乐",
-      "url": "http://17782331118.top:8188/rtp/235.254.198.187:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "CCTV7SD",
-      "url": "http://17782331118.top:8188/rtp/235.254.199.4:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "深圳卫视SD",
-      "url": "http://17782331118.top:8188/rtp/235.254.197.167:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "贵州卫视SD",
-      "url": "http://17782331118.top:8188/rtp/235.254.197.32:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "黑龙江卫视SD",
-      "url": "http://17782331118.top:8188/rtp/235.254.197.30:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "安徽卫视SD",
-      "url": "http://17782331118.top:8188/rtp/235.254.197.18:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "东南卫视SD",
-      "url": "http://17782331118.top:8188/rtp/235.254.197.24:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "广东卫视SD",
-      "url": "http://17782331118.top:8188/rtp/235.254.199.37:7980",
-      "group": "💫组播央卫",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "新白娘子传奇",
-      "url": "http://8.155.43.98:35455/yy/1354490667",
+      "name": "插翅难逃",
+      "url": "http://8.155.43.98:35455/yy/23402146",
       "group": "💫电视剧频道_520",
       "ok": false,
       "reason": "HTTP 404"
     },
     {
-      "name": "地下交通站",
-      "url": "http://8.155.43.98:35455/yy/1382736795",
-      "group": "💫歪歪轮播_520",
+      "name": "射雕英雄传83版",
+      "url": "http://8.155.43.98:35455/yy/1354210357",
+      "group": "💫电视剧频道_520",
       "ok": false,
       "reason": "HTTP 404"
     },
     {
-      "name": "沈腾轮播",
-      "url": "http://222.186.39.21:35466/huya/11601968",
+      "name": "隋唐英雄传",
+      "url": "http://8.155.43.98:35455/yy/1352475619",
+      "group": "💫电视剧频道_520",
+      "ok": false,
+      "reason": "HTTP 404"
+    },
+    {
+      "name": "成龙轮播",
+      "url": "http://222.186.39.21:35466/huya/11342386",
       "group": "💫明星轮播_520",
       "ok": false,
       "reason": "HTTP 403"
     },
     {
-      "name": "CCTV1",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.20:5140",
-      "group": "💫凤凰秀_520",
+      "name": "甄子丹轮播",
+      "url": "http://222.186.39.21:35466/huya/11352935",
+      "group": "💫明星轮播_520",
       "ok": false,
-      "reason": "HTTP 503"
+      "reason": "HTTP 403"
     },
     {
-      "name": "CCTV1",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.52:5140",
-      "group": "💫凤凰秀_520",
+      "name": "梁家辉轮播",
+      "url": "http://222.186.39.21:35466/huya/11342429",
+      "group": "💫明星轮播_520",
       "ok": false,
-      "reason": "HTTP 503"
+      "reason": "HTTP 403"
     },
     {
-      "name": "CCTV2",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.21:5140",
-      "group": "💫凤凰秀_520",
+      "name": "怪兽轮播",
+      "url": "http://222.186.39.21:35466/huya/21059577",
+      "group": "💫明星轮播_520",
       "ok": false,
-      "reason": "HTTP 503"
+      "reason": "HTTP 403"
     },
     {
-      "name": "CCTV2",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.68:5140",
-      "group": "💫凤凰秀_520",
+      "name": "枪战轮播",
+      "url": "http://222.186.39.21:35466/huya/21059579",
+      "group": "💫明星轮播_520",
       "ok": false,
-      "reason": "HTTP 503"
+      "reason": "HTTP 403"
     },
     {
-      "name": "CCTV8",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.27:5140",
-      "group": "💫凤凰秀_520",
+      "name": "创世纪轮播",
+      "url": "http://222.186.39.21:35466/huya/29465852",
+      "group": "💫电影频道_520",
       "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "CCTV16",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.82:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "CETV早期教育",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.187:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "湖南卫视",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.86:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "广东卫视",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.88:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "财富天下",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.41:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "兵器科技",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.178:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "游戏风云",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.13:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "东方卫视4K50FPS",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.224:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "山东卫视4K50FPS",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.228:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "CCTV16-4K",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.114:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "欢笑剧场4K",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.115:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "BesTV电影介绍",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.116:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "BesTV4K电影",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.169:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "BesTV4K记录",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.170:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "BesTV4K动画",
-      "url": "http://204315.xyz:20204/rtp/233.18.204.171:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "HTTP 503"
-    },
-    {
-      "name": "江西卫视",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.130:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "黑龙江卫视",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.139:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "法治天地",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.49:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "上海都市",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.2:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "游戏风云",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.44:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "风云足球",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.176:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "世界地理",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.179:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "文化精品",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.186:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "CCTV-4-4K50FPS",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.204:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "多彩文体4K50FPS",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.205:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "深圳卫视4K50FPS",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.219:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "四川卫视4K50FPS",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.225:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "江苏卫视4K50FPS",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.226:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
-    },
-    {
-      "name": "BesTV4K记录",
-      "url": "http://800128.xyz:62888/rtp/233.18.204.170:5140",
-      "group": "💫凤凰秀_520",
-      "ok": false,
-      "reason": "空响应"
+      "reason": "HTTP 403"
     },
     {
       "name": "CCTV5",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.8.75:8000",
-      "group": "💫央视",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.71:5140",
+      "group": "💫凤凰秀_520",
       "ok": false,
-      "reason": "HTTP 503"
+      "reason": "空响应"
     },
     {
-      "name": "CCTV12",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.8.55:9822",
-      "group": "💫央视",
+      "name": "CCTV6",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.72:5140",
+      "group": "💫凤凰秀_520",
       "ok": false,
-      "reason": "HTTP 503"
+      "reason": "空响应"
     },
     {
-      "name": "河南卫视",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.8.29:8000",
-      "group": "💫卫视",
+      "name": "CCTV11",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.30:5140",
+      "group": "💫凤凰秀_520",
       "ok": false,
-      "reason": "HTTP 503"
+      "reason": "空响应"
+    },
+    {
+      "name": "CCTV11",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.77:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "江苏卫视",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.85:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "浙江卫视",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.121:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "旅游卫视",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.122:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
     },
     {
       "name": "广西卫视",
-      "url": "http://www.frankgb.cn:4022/udp/239.49.8.10:8000",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.107:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "天津卫视",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.97:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "河北卫视",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.103:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "家庭理财",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.157:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "金鹰卡通",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.150:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "上海教育",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.11:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "新闻综合",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.189:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "东方购物1",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.61:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "东方购物2",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.62:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "高尔夫网球",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.181:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "金鹰纪实",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.104:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "百事通画面",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.158:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "CCTV4-4K",
+      "url": "http://800128.xyz:62888/rtp/233.18.204.188:5140",
+      "group": "💫凤凰秀_520",
+      "ok": false,
+      "reason": "空响应"
+    },
+    {
+      "name": "CCTV3",
+      "url": "http://www.frankgb.cn:4022/udp/239.49.8.74:8000",
+      "group": "💫央视",
+      "ok": false,
+      "reason": "HTTP 503"
+    },
+    {
+      "name": "山西卫视",
+      "url": "http://www.frankgb.cn:4022/udp/239.49.1.55:8000",
       "group": "💫卫视",
       "ok": false,
       "reason": "HTTP 503"
     },
     {
-      "name": "寰宇新闻",
-      "url": "http://128.14.206.166/pull-f5.flive.douyincdn.com/live/hyxw.flv",
-      "group": "🌐极速港台_520",
+      "name": "安徽卫视",
+      "url": "http://www.frankgb.cn:4022/udp/239.49.8.80:8000",
+      "group": "💫卫视",
       "ok": false,
-      "reason": "HTTP 404"
+      "reason": "HTTP 503"
     },
     {
-      "name": "为妈妈点赞",
-      "url": "https://live.ottiptv.cc/yy/1382745098",
-      "group": "🌐电影经典",
+      "name": "河北卫视",
+      "url": "http://www.frankgb.cn:4022/udp/239.49.8.114:8000",
+      "group": "💫卫视",
       "ok": false,
-      "reason": "超时"
+      "reason": "HTTP 503"
     },
     {
-      "name": "延边延吉综合",
-      "url": "http://stream6.jlntv.cn/yj/playlist.m3u8",
-      "group": "🌐吉林地方",
+      "name": "吉林卫视",
+      "url": "http://www.frankgb.cn:4022/udp/239.49.8.113:8000",
+      "group": "💫卫视",
       "ok": false,
-      "reason": "分片不可用(HTTP 404)"
+      "reason": "HTTP 503"
+    },
+    {
+      "name": "三沙卫视",
+      "url": "http://www.frankgb.cn:4022/udp/239.49.0.167:8000",
+      "group": "💫卫视",
+      "ok": false,
+      "reason": "HTTP 503"
+    },
+    {
+      "name": "丽水松阳综合",
+      "url": "http://l.cztvcloud.com/channels/lantian/SXsongyang1/720p.m3u8",
+      "group": "🌐浙江地方",
+      "ok": false,
+      "reason": "子列表/分片不可用(响应过大(>8MB))"
     }
   ]
 }
