@@ -3,36 +3,6 @@
 http://17782331118.top:8188/rtp/235.254.199.51:7980
 #EXTINF:-1 tvg-name="CCTV4" group-title="💫组播央卫",CCTV4
 http://17782331118.top:8188/rtp/235.254.199.183:7980
-#EXTINF:-1 tvg-name="CCTV13" group-title="💫组播央卫",CCTV13
-http://17782331118.top:8188/rtp/235.254.197.162:7980
-#EXTINF:-1 tvg-name="CHC动作电影" group-title="💫组播央卫",CHC动作电影
-http://17782331118.top:8188/rtp/235.254.198.247:7980
-#EXTINF:-1 tvg-name="文物宝库" group-title="💫组播央卫",文物宝库
-http://17782331118.top:8188/rtp/235.254.198.132:7980
-#EXTINF:-1 tvg-name="江西卫视" group-title="💫组播央卫",江西卫视
-http://17782331118.top:8188/rtp/235.254.199.190:7980
-#EXTINF:-1 tvg-name="宁夏卫视" group-title="💫组播央卫",宁夏卫视
-http://17782331118.top:8188/rtp/235.254.197.138:7980
-#EXTINF:-1 tvg-name="新疆卫视" group-title="💫组播央卫",新疆卫视
-http://17782331118.top:8188/rtp/235.254.197.178:7980
-#EXTINF:-1 tvg-name="金鹰卡通SD" group-title="💫组播央卫",金鹰卡通SD
-http://17782331118.top:8188/rtp/235.254.197.165:7980
-#EXTINF:-1 tvg-name="重庆文体娱乐" group-title="💫组播央卫",重庆文体娱乐
-http://17782331118.top:8188/rtp/235.254.198.187:7980
-#EXTINF:-1 tvg-name="CCTV7SD" group-title="💫组播央卫",CCTV7SD
-http://17782331118.top:8188/rtp/235.254.199.4:7980
-#EXTINF:-1 tvg-name="深圳卫视SD" group-title="💫组播央卫",深圳卫视SD
-http://17782331118.top:8188/rtp/235.254.197.167:7980
-#EXTINF:-1 tvg-name="贵州卫视SD" group-title="💫组播央卫",贵州卫视SD
-http://17782331118.top:8188/rtp/235.254.197.32:7980
-#EXTINF:-1 tvg-name="黑龙江卫视SD" group-title="💫组播央卫",黑龙江卫视SD
-http://17782331118.top:8188/rtp/235.254.197.30:7980
-#EXTINF:-1 tvg-name="安徽卫视SD" group-title="💫组播央卫",安徽卫视SD
-http://17782331118.top:8188/rtp/235.254.197.18:7980
-#EXTINF:-1 tvg-name="东南卫视SD" group-title="💫组播央卫",东南卫视SD
-http://17782331118.top:8188/rtp/235.254.197.24:7980
-#EXTINF:-1 tvg-name="广东卫视SD" group-title="💫组播央卫",广东卫视SD
-http://17782331118.top:8188/rtp/235.254.199.37:7980
 #EXTINF:-1 tvg-name="驻马店公共" group-title="💫河南频道",驻马店公共
 https://p2hs.vzan.com/slowlive/692736859757132846/live.m3u8
 #EXTINF:-1 tvg-name="驻马店新闻" group-title="💫河南频道",驻马店新闻
@@ -135,8 +105,6 @@ https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8
 http://120.76.248.139/live/bfgd/4200000611.m3u8
 #EXTINF:-1 tvg-name="插翅难逃" group-title="💫电视剧频道_520",插翅难逃
 http://8.155.43.98:35455/yy/23402146
-#EXTINF:-1 tvg-name="新白娘子传奇" group-title="💫电视剧频道_520",新白娘子传奇
-http://8.155.43.98:35455/yy/1354490667
 #EXTINF:-1 tvg-name="射雕英雄传83版" group-title="💫电视剧频道_520",射雕英雄传83版
 http://8.155.43.98:35455/yy/1354210357
 #EXTINF:-1 tvg-name="神雕侠侣" group-title="💫电视剧频道_520",神雕侠侣
@@ -353,8 +321,6 @@ http://cfss.cc/cdn/huya/11352906.flv
 http://cfss.cc/cdn/huya/23650774.flv
 #EXTINF:-1 tvg-name="正阳门下" group-title="💫歪歪轮播_520",正阳门下
 http://8.155.43.98:35455/yy/1354931580
-#EXTINF:-1 tvg-name="地下交通站" group-title="💫歪歪轮播_520",地下交通站
-http://8.155.43.98:35455/yy/1382736795
 #EXTINF:-1 tvg-name="刘罗锅" group-title="💫歪歪轮播_520",刘罗锅
 http://8.155.43.98:35455/yy/1382745191
 #EXTINF:-1 tvg-name="少年包青天" group-title="💫歪歪轮播_520",少年包青天
@@ -427,8 +393,6 @@ http://222.186.39.21:35466/huya/11336587
 http://222.186.39.21:35466/huya/11342429
 #EXTINF:-1 tvg-name="五福星轮播" group-title="💫明星轮播_520",五福星轮播
 http://222.186.39.21:35466/huya/11282233
-#EXTINF:-1 tvg-name="沈腾轮播" group-title="💫明星轮播_520",沈腾轮播
-http://222.186.39.21:35466/huya/11601968
 #EXTINF:-1 tvg-name="怪兽轮播" group-title="💫明星轮播_520",怪兽轮播
 http://222.186.39.21:35466/huya/21059577
 #EXTINF:-1 tvg-name="罪犯轮播" group-title="💫明星轮播_520",罪犯轮播
@@ -839,46 +803,6 @@ http://bobohome.ignorelist.com:20247/fengshows?id=2.m3u8
 http://bobohome.ignorelist.com:20247/fengshows?id=1.m3u8
 #EXTINF:-1 tvg-name="凤凰香港台" group-title="💫凤凰秀_520",凤凰香港台
 http://bobohome.ignorelist.com:20247/fengshows?id=3.m3u8
-#EXTINF:-1 tvg-name="CCTV1" group-title="💫凤凰秀_520",CCTV1
-http://204315.xyz:20204/rtp/233.18.204.20:5140
-#EXTINF:-1 tvg-name="CCTV1" group-title="💫凤凰秀_520",CCTV1
-http://204315.xyz:20204/rtp/233.18.204.52:5140
-#EXTINF:-1 tvg-name="CCTV2" group-title="💫凤凰秀_520",CCTV2
-http://204315.xyz:20204/rtp/233.18.204.21:5140
-#EXTINF:-1 tvg-name="CCTV2" group-title="💫凤凰秀_520",CCTV2
-http://204315.xyz:20204/rtp/233.18.204.68:5140
-#EXTINF:-1 tvg-name="CCTV8" group-title="💫凤凰秀_520",CCTV8
-http://204315.xyz:20204/rtp/233.18.204.27:5140
-#EXTINF:-1 tvg-name="CCTV16" group-title="💫凤凰秀_520",CCTV16
-http://204315.xyz:20204/rtp/233.18.204.82:5140
-#EXTINF:-1 tvg-name="CETV早期教育" group-title="💫凤凰秀_520",CETV早期教育
-http://204315.xyz:20204/rtp/233.18.204.187:5140
-#EXTINF:-1 tvg-name="湖南卫视" group-title="💫凤凰秀_520",湖南卫视
-http://204315.xyz:20204/rtp/233.18.204.86:5140
-#EXTINF:-1 tvg-name="广东卫视" group-title="💫凤凰秀_520",广东卫视
-http://204315.xyz:20204/rtp/233.18.204.88:5140
-#EXTINF:-1 tvg-name="财富天下" group-title="💫凤凰秀_520",财富天下
-http://204315.xyz:20204/rtp/233.18.204.41:5140
-#EXTINF:-1 tvg-name="兵器科技" group-title="💫凤凰秀_520",兵器科技
-http://204315.xyz:20204/rtp/233.18.204.178:5140
-#EXTINF:-1 tvg-name="游戏风云" group-title="💫凤凰秀_520",游戏风云
-http://204315.xyz:20204/rtp/233.18.204.13:5140
-#EXTINF:-1 tvg-name="东方卫视4K50FPS" group-title="💫凤凰秀_520",东方卫视4K50FPS
-http://204315.xyz:20204/rtp/233.18.204.224:5140
-#EXTINF:-1 tvg-name="山东卫视4K50FPS" group-title="💫凤凰秀_520",山东卫视4K50FPS
-http://204315.xyz:20204/rtp/233.18.204.228:5140
-#EXTINF:-1 tvg-name="CCTV16-4K" group-title="💫凤凰秀_520",CCTV16-4K
-http://204315.xyz:20204/rtp/233.18.204.114:5140
-#EXTINF:-1 tvg-name="欢笑剧场4K" group-title="💫凤凰秀_520",欢笑剧场4K
-http://204315.xyz:20204/rtp/233.18.204.115:5140
-#EXTINF:-1 tvg-name="BesTV电影介绍" group-title="💫凤凰秀_520",BesTV电影介绍
-http://204315.xyz:20204/rtp/233.18.204.116:5140
-#EXTINF:-1 tvg-name="BesTV4K电影" group-title="💫凤凰秀_520",BesTV4K电影
-http://204315.xyz:20204/rtp/233.18.204.169:5140
-#EXTINF:-1 tvg-name="BesTV4K记录" group-title="💫凤凰秀_520",BesTV4K记录
-http://204315.xyz:20204/rtp/233.18.204.170:5140
-#EXTINF:-1 tvg-name="BesTV4K动画" group-title="💫凤凰秀_520",BesTV4K动画
-http://204315.xyz:20204/rtp/233.18.204.171:5140
 #EXTINF:-1 tvg-name="CCTV2" group-title="💫凤凰秀_520",CCTV2
 http://800128.xyz:62888/rtp/233.18.204.68:5140
 #EXTINF:-1 tvg-name="CCTV3" group-title="💫凤凰秀_520",CCTV3
@@ -927,8 +851,6 @@ http://800128.xyz:62888/rtp/233.18.204.107:5140
 http://800128.xyz:62888/rtp/233.18.204.97:5140
 #EXTINF:-1 tvg-name="江西卫视" group-title="💫凤凰秀_520",江西卫视
 http://800128.xyz:62888/rtp/233.18.204.95:5140
-#EXTINF:-1 tvg-name="江西卫视" group-title="💫凤凰秀_520",江西卫视
-http://800128.xyz:62888/rtp/233.18.204.130:5140
 #EXTINF:-1 tvg-name="西藏卫视" group-title="💫凤凰秀_520",西藏卫视
 http://800128.xyz:62888/rtp/233.18.204.134:5140
 #EXTINF:-1 tvg-name="陕西卫视" group-title="💫凤凰秀_520",陕西卫视
@@ -937,22 +859,16 @@ http://800128.xyz:62888/rtp/233.18.204.135:5140
 http://800128.xyz:62888/rtp/233.18.204.106:5140
 #EXTINF:-1 tvg-name="甘肃卫视" group-title="💫凤凰秀_520",甘肃卫视
 http://800128.xyz:62888/rtp/233.18.204.137:5140
-#EXTINF:-1 tvg-name="黑龙江卫视" group-title="💫凤凰秀_520",黑龙江卫视
-http://800128.xyz:62888/rtp/233.18.204.139:5140
 #EXTINF:-1 tvg-name="河北卫视" group-title="💫凤凰秀_520",河北卫视
 http://800128.xyz:62888/rtp/233.18.204.103:5140
 #EXTINF:-1 tvg-name="东方购物" group-title="💫凤凰秀_520",东方购物
 http://800128.xyz:62888/rtp/233.18.204.10:5140
-#EXTINF:-1 tvg-name="法治天地" group-title="💫凤凰秀_520",法治天地
-http://800128.xyz:62888/rtp/233.18.204.49:5140
 #EXTINF:-1 tvg-name="家庭理财" group-title="💫凤凰秀_520",家庭理财
 http://800128.xyz:62888/rtp/233.18.204.157:5140
 #EXTINF:-1 tvg-name="金鹰卡通" group-title="💫凤凰秀_520",金鹰卡通
 http://800128.xyz:62888/rtp/233.18.204.150:5140
 #EXTINF:-1 tvg-name="卡酷少儿" group-title="💫凤凰秀_520",卡酷少儿
 http://800128.xyz:62888/rtp/233.18.204.152:5140
-#EXTINF:-1 tvg-name="上海都市" group-title="💫凤凰秀_520",上海都市
-http://800128.xyz:62888/rtp/233.18.204.2:5140
 #EXTINF:-1 tvg-name="上海教育" group-title="💫凤凰秀_520",上海教育
 http://800128.xyz:62888/rtp/233.18.204.11:5140
 #EXTINF:-1 tvg-name="新闻综合" group-title="💫凤凰秀_520",新闻综合
@@ -969,36 +885,18 @@ http://800128.xyz:62888/rtp/233.18.204.62:5140
 http://800128.xyz:62888/rtp/233.18.204.174:5140
 #EXTINF:-1 tvg-name="兵器科技" group-title="💫凤凰秀_520",兵器科技
 http://800128.xyz:62888/rtp/233.18.204.178:5140
-#EXTINF:-1 tvg-name="游戏风云" group-title="💫凤凰秀_520",游戏风云
-http://800128.xyz:62888/rtp/233.18.204.44:5140
-#EXTINF:-1 tvg-name="风云足球" group-title="💫凤凰秀_520",风云足球
-http://800128.xyz:62888/rtp/233.18.204.176:5140
 #EXTINF:-1 tvg-name="高尔夫网球" group-title="💫凤凰秀_520",高尔夫网球
 http://800128.xyz:62888/rtp/233.18.204.181:5140
 #EXTINF:-1 tvg-name="金鹰纪实" group-title="💫凤凰秀_520",金鹰纪实
 http://800128.xyz:62888/rtp/233.18.204.104:5140
 #EXTINF:-1 tvg-name="女性时尚" group-title="💫凤凰秀_520",女性时尚
 http://800128.xyz:62888/rtp/233.18.204.180:5140
-#EXTINF:-1 tvg-name="世界地理" group-title="💫凤凰秀_520",世界地理
-http://800128.xyz:62888/rtp/233.18.204.179:5140
-#EXTINF:-1 tvg-name="文化精品" group-title="💫凤凰秀_520",文化精品
-http://800128.xyz:62888/rtp/233.18.204.186:5140
 #EXTINF:-1 tvg-name="百事通画面" group-title="💫凤凰秀_520",百事通画面
 http://800128.xyz:62888/rtp/233.18.204.158:5140
 #EXTINF:-1 tvg-name="CCTV4-4K" group-title="💫凤凰秀_520",CCTV4-4K
 http://800128.xyz:62888/rtp/233.18.204.188:5140
-#EXTINF:-1 tvg-name="CCTV-4-4K50FPS" group-title="💫凤凰秀_520",CCTV-4-4K50FPS
-http://800128.xyz:62888/rtp/233.18.204.204:5140
-#EXTINF:-1 tvg-name="多彩文体4K50FPS" group-title="💫凤凰秀_520",多彩文体4K50FPS
-http://800128.xyz:62888/rtp/233.18.204.205:5140
-#EXTINF:-1 tvg-name="深圳卫视4K50FPS" group-title="💫凤凰秀_520",深圳卫视4K50FPS
-http://800128.xyz:62888/rtp/233.18.204.219:5140
 #EXTINF:-1 tvg-name="东方卫视4K50FPS" group-title="💫凤凰秀_520",东方卫视4K50FPS
 http://800128.xyz:62888/rtp/233.18.204.224:5140
-#EXTINF:-1 tvg-name="四川卫视4K50FPS" group-title="💫凤凰秀_520",四川卫视4K50FPS
-http://800128.xyz:62888/rtp/233.18.204.225:5140
-#EXTINF:-1 tvg-name="江苏卫视4K50FPS" group-title="💫凤凰秀_520",江苏卫视4K50FPS
-http://800128.xyz:62888/rtp/233.18.204.226:5140
 #EXTINF:-1 tvg-name="湖南卫视4K50FPS" group-title="💫凤凰秀_520",湖南卫视4K50FPS
 http://800128.xyz:62888/rtp/233.18.204.227:5140
 #EXTINF:-1 tvg-name="山东卫视4K50FPS" group-title="💫凤凰秀_520",山东卫视4K50FPS
@@ -1013,8 +911,6 @@ http://800128.xyz:62888/rtp/233.18.204.115:5140
 http://800128.xyz:62888/rtp/233.18.204.116:5140
 #EXTINF:-1 tvg-name="BesTV4K电影" group-title="💫凤凰秀_520",BesTV4K电影
 http://800128.xyz:62888/rtp/233.18.204.169:5140
-#EXTINF:-1 tvg-name="BesTV4K记录" group-title="💫凤凰秀_520",BesTV4K记录
-http://800128.xyz:62888/rtp/233.18.204.170:5140
 #EXTINF:-1 tvg-name="BesTV4K动画" group-title="💫凤凰秀_520",BesTV4K动画
 http://800128.xyz:62888/rtp/233.18.204.171:5140
 #EXTINF:-1 tvg-name="浙江少儿" group-title="💫浙江地区",浙江少儿
@@ -1129,16 +1025,12 @@ http://www.frankgb.cn:4022/udp/239.49.8.50:9802
 http://www.frankgb.cn:4022/udp/239.49.8.74:8000
 #EXTINF:-1 tvg-name="CCTV4" group-title="💫央视",CCTV4
 http://www.frankgb.cn:4022/udp/239.49.8.51:9806
-#EXTINF:-1 tvg-name="CCTV5" group-title="💫央视",CCTV5
-http://www.frankgb.cn:4022/udp/239.49.8.75:8000
 #EXTINF:-1 tvg-name="CCTV6" group-title="💫央视",CCTV6
 http://www.frankgb.cn:4022/udp/239.49.8.76:8000
 #EXTINF:-1 tvg-name="CCTV7" group-title="💫央视",CCTV7
 http://www.frankgb.cn:4022/udp/239.49.0.126:8000
 #EXTINF:-1 tvg-name="CCTV8" group-title="💫央视",CCTV8
 http://www.frankgb.cn:4022/udp/239.49.8.77:8000
-#EXTINF:-1 tvg-name="CCTV12" group-title="💫央视",CCTV12
-http://www.frankgb.cn:4022/udp/239.49.8.55:9822
 #EXTINF:-1 tvg-name="浙江卫视" group-title="💫卫视",浙江卫视
 http://ali-xwl.cztv.com/live/channel4k2160p.m3u8
 #EXTINF:-1 tvg-name="广东卫视" group-title="💫卫视",广东卫视
@@ -1151,10 +1043,6 @@ http://www.frankgb.cn:4022/udp/239.49.8.80:8000
 http://www.frankgb.cn:4022/udp/239.49.8.57:9830
 #EXTINF:-1 tvg-name="河北卫视" group-title="💫卫视",河北卫视
 http://www.frankgb.cn:4022/udp/239.49.8.114:8000
-#EXTINF:-1 tvg-name="河南卫视" group-title="💫卫视",河南卫视
-http://www.frankgb.cn:4022/udp/239.49.8.29:8000
-#EXTINF:-1 tvg-name="广西卫视" group-title="💫卫视",广西卫视
-http://www.frankgb.cn:4022/udp/239.49.8.10:8000
 #EXTINF:-1 tvg-name="吉林卫视" group-title="💫卫视",吉林卫视
 http://www.frankgb.cn:4022/udp/239.49.8.113:8000
 #EXTINF:-1 tvg-name="青海卫视" group-title="💫卫视",青海卫视
@@ -1207,8 +1095,6 @@ http://222.213.105.65:7788/955227979
 http://128.14.206.166/pull-f5.flive.douyincdn.com/live/jade.flv
 #EXTINF:-1 tvg-name="无线新闻台" group-title="🌐极速港台_520",无线新闻台
 http://128.14.206.166/pull-f5.flive.douyincdn.com/live/wxxw.flv
-#EXTINF:-1 tvg-name="寰宇新闻" group-title="🌐极速港台_520",寰宇新闻
-http://128.14.206.166/pull-f5.flive.douyincdn.com/live/hyxw.flv
 #EXTINF:-1 tvg-name="TVB Plus" group-title="🌐极速港台_520",TVB Plus
 http://167.88.62.43:64012/0.ts
 #EXTINF:-1 tvg-name="香港C+" group-title="🌐极速港台_520",香港C+
@@ -2023,8 +1909,6 @@ https://live.ottiptv.cc/yy/1354936217
 https://live.ottiptv.cc/yy/1354936195
 #EXTINF:-1 tvg-name="旺达·塞克丝：怼遍全场" group-title="🌐电影经典",旺达·塞克丝：怼遍全场
 https://live.ottiptv.cc/yy/1354936221
-#EXTINF:-1 tvg-name="为妈妈点赞" group-title="🌐电影经典",为妈妈点赞
-https://live.ottiptv.cc/yy/1382745098
 #EXTINF:-1 tvg-name="狼爸硬核带娃" group-title="🌐电影经典",狼爸硬核带娃
 https://live.ottiptv.cc/yy/1382735627
 #EXTINF:-1 tvg-name="龙师傅来接招" group-title="🌐电影经典",龙师傅来接招
@@ -2673,8 +2557,6 @@ http://stream6.jlntv.cn/ty/playlist.m3u8
 http://stream6.jlntv.cn/fy/playlist.m3u8
 #EXTINF:-1 tvg-name="松原乾安综合" group-title="🌐吉林地方",松原乾安综合
 http://stream6.jlntv.cn/qa/playlist.m3u8
-#EXTINF:-1 tvg-name="延边延吉综合" group-title="🌐吉林地方",延边延吉综合
-http://stream6.jlntv.cn/yj/playlist.m3u8
 #EXTINF:-1 tvg-name="延边图们TV1" group-title="🌐吉林地方",延边图们TV1
 http://stream6.jlntv.cn/tm/playlist.m3u8
 #EXTINF:-1 tvg-name="延边敦化一套" group-title="🌐吉林地方",延边敦化一套
